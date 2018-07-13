@@ -1,2 +1,19 @@
-<h1>Welcome To The homepage</h1>
-<%= link_to "logout", destroy_user_session_path, method: :delete %>
+<!DOCTYPE html>
+<center>
+<div id="container1">
+
+    <h1 id="alphaText">Welcome To Stock Tracker!</h1>
+    <h3 id="alphaText">Please Click Check A Stock To Get Started!</h3>
+    <br>
+    <br>
+    <%= link_to "Check A Stock", "/my_portfolio", class: "Btn btn-success btn-lg btn-xlarge2" %>
+    <br>
+    <br>
+    <br>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "Btn btn-danger btn-lg btn-xlarge" %>
+    <br>
+    <br>
+    <br>
+</div>
+</center>
+</html>

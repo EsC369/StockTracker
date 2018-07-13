@@ -1,0 +1,124 @@
+
+// Any changing to the actual bootstrap must go above the sprockets
+// Anything else within the bootstrap can go below
+
+#loginAndOutText {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    color: white;
+    // color:rgb(3, 0, 2);
+    font-size: 1.7em;
+    background-color: black;
+    // background: linear-gradient(rgb(4, 224, 240), yellow);
+    text-shadow: 1px 1px red;
+    box-shadow: 2px 3px black;
+}
+
+#container1 {
+    position: relative;
+    left: 140px;
+    background-image: asset-url("WelcomePage.jpg");
+    // code to fit the image
+    background-size: cover;
+    height: 600px;
+    padding-top: 160px;
+}
+
+#welcomeBackground2 {
+    background-image: asset-url("WelcomePage.jpg");
+    // code to fit the image
+    background-size: cover;
+    height: 600px;
+    padding-top: 60px;
+}
+
+#welcomeBackground {
+    background-image: asset-url("WelcomePage.jpg");
+    // code to fit the image
+    background-size: cover;
+    height: 500px;
+    padding-top: 150px;
+}
+
+#alphaText{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px rgb(0, 0, 0);
+}
+
+#logo{
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover{
+    color: orangered;
+    text-decoration: none;
+}
+
+.center{
+    text-align: center;
+}
+
+.jumbotron{
+    background-image: asset-url("WelcomePage.jpg");
+    // code to fit the image
+    background-size: cover;
+    height: 500px;
+    padding-top: 150px;
+}
+
+
+footer{
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+
+footer a:hover{
+    color: #222;
+}
+
+#navcolor{
+    color: rgb(248, 120, 0);
+    font-weight: bold;
+}
+
+#navcolor:hover{
+    color: rgb(1, 253, 64);
+    text-decoration: none;
+}
+
+li{
+    color: red;
+}
+
+.time{
+    color: green;
+}
+
+.artBy{
+    color: rgb(255, 94, 0);
+    font-weight: bold;
+}
+
+.listing{
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.navcolor2{
+    color: rgb(248, 120, 0);
+    font-weight: bold;
+}
+
+.navcolor2:hover{
+    color: orangered;
+    text-decoration: none;
+}
+

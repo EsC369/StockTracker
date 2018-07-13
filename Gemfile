@@ -29,6 +29,7 @@ gem 'hirb'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+gem 'stock_quote'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

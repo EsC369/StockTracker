@@ -1,3 +1,7 @@
+<div id=welcomeBackground2>
+<center><h2 id="alphaText">Welcome To Stock Tracker! Please Log In Or Sign Up!</h2></center>
+<br>
+<br>
 <div class="panel panel-default devise-bs">
   <div class="panel-heading">
     <h4><%= t('.sign_in', default: 'Sign in') %></h4>
@@ -20,7 +24,9 @@
         </div>
       <% end %>
       <%= f.submit  t('.sign_in', default: 'Sign in'), class: 'btn btn-primary' %>
+      <button class="btn btn-success" type="button"><a href="/users/sign_up">GO TO SIGNUP PAGE</a></button>
     <% end %>
   </div>
 </div>
-<%= render 'devise/shared/links' %>
+<h1 id="LoginAndOutText"><a href="/users/sign_up">SIGNUP</a></h1>
+</div>

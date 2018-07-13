@@ -1,0 +1,41 @@
+<h1>My Portfolio </h1>
+
+<h3> Search For Stocks: </h3>
+<div id="Stock-lookup">
+    <%= form_tag search_stocks_path, method: :get, id: "stock-lookup-form" do %>
+    <div class="form-group row no-padding text-center co-md-12">
+        <div class="col-md-8">
+            <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true, class: "form-control search-box input-lg" %>
+        </div>
+        <div class-"col-md-2">
+        <%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
+            <i class="fa fa-search"></i> Look Up A Stock
+        <% end %>
+        </div>
+    </div>
+    <% end %>
+
+<% if @stock %>
+    <div class="well result-block">
+        <strong>Symbol: </strong><%= @stock.ticker %> 
+        <strong>Name: </strong><%= @stock.name %> 
+        <strong>Price: </strong><%= @stock.last_price %> 
+        <% if current_user.can_add_stock?(@stock.ticker) %>
+            <%= link_to "Add To My Stocks", user_stocks_path(user: current_user, stock_ticker: @stock.ticker), method: :post, class: "btn btn-xs btn-success" %>
+        <% else %>
+        <span class="label label-default">
+            Stock Cannot Be Addded Becuase You Have Already Added
+        <% if !current_user.under_stock_limit? %>
+            10 Stocks
+        <% end %>
+        <% if current_user.stock_already_added?(@stock.ticker) %>
+            This Stock
+        <% end %>
+        </span>
+        
+        <% end %>
+    </div>
+<% end %>
+
+<%= render "stocks/list" %>
+

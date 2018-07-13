@@ -1,4 +1,7 @@
+<div id=welcomeBackground2>
+
 <%= bootstrap_devise_error_messages! %>
+<center><h1 id="alphaText" >Sign up! IT'S EASY!</h1></center>
 <div class="panel panel-default devise-bs">
   <div class="panel-heading">
     <h4><%= t('.sign_up', default: 'Sign up') %></h4>
@@ -18,7 +21,8 @@
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
       <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
+      <button class="btn btn-success" type="button"><a href="/users/sign_in">GO TO LOGIN PAGE</a></button>
     <% end %>
   </div>
 </div>
-<%= render 'devise/shared/links' %>
+</div>
