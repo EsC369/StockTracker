@@ -17,8 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  username: ubuntu
   pool: 5
 
 development:
@@ -81,5 +80,5 @@ test:
 production:
   <<: *default
   database: Stock_Tracker_production
-  username: Stock_Tracker
+  # username: Stock_Tracker  commented out for purpose of deployment
   password: <%= ENV['STOCK_TRACKER_DATABASE_PASSWORD'] %>
